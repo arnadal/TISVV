@@ -1,0 +1,178 @@
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("./Fonts/Unbounded/Unbounded-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("./Fonts/Outfit/Outfit-VariableFont_wght.ttf");
+}
+
+:root {
+  --black: #1E1E1E;
+  --white: #EEEEEE;
+  scroll-behavior: smooth;
+}
+
+:root.dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+:root.light {
+  background: var(--white);
+  color: var(--black);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  font-size: 20px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  padding: 30px;
+  font-size: large;
+  gap: 20px;
+  z-index: 1000;
+}
+
+nav:not(.no_alignment) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: #0b2169;
+  font-weight: bold;
+}
+
+nav div .nav_line {
+  opacity: 0%;
+  color: transparent;
+  font-weight: bold;
+  margin-top: 2.5px;
+  width: fit-content;
+  height: 2.5px;
+  background: rgb(226, 78, 152);
+  transition: opacity 0.2s;
+}
+
+.nav_line::selection {
+  background: transparent;
+}
+
+nav div:hover .nav_line {
+  opacity: 100%;
+}
+
+main {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 8192px;
+}
+
+section {
+  position: relative;
+  left: 0;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+section#home {
+  background-image: url("./Media/pexels-catiamatos-1072179.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section_content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_content p {
+  max-width: 25%;
+}
+
+.section_content img {
+  max-width: 25%;
+}
+
+#footer .section_content p {
+  max-width: calc(100% / 3);
+}
+
+#footer .section_content img {
+  max-width: calc(100% / 3);
+}
+
+section.light {
+  background: var(--white);
+  color: var(--black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Unbounded", display, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.gradient {
+  background: linear-gradient(45deg, rgb(172, 11, 172), hotpink);
+  background: -webkit-linear-gradient(45deg, rgb(172, 11, 172), hotpink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+hr {
+  width: calc(100% / 3);
+  opacity: calc(100% / 3);
+}
+
+#footer div div#credits {
+  background: #00000069;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(67, 67, 255);
+}
+
+a#scroller {
+  font-size: 3rem;
+  color: var(--white);
+  font-weight: 900;
+  text-align: center;
+}
+
+small {
+  opacity: calc((100% / 3) * 2);
+  font-size: 16px;
+}
